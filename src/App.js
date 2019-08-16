@@ -6,20 +6,20 @@ import MemberList from "./components/MemberList"
 import data from "./data";
 
 const App = () => {
-    const [members, setMember] = useState(data);
+    const [memberList, setMember] = useState(data);
 
     const addNewMember = member => {
-        setMember([...members, member]);
+        setMember([...memberList, member]);
     }
 
     return (
         <div className="note">
             <h1>Add a Member</h1>
             {/* adding a member form */}
-            <Form addNewMember={addNewMember} />
+            <Form addNewMember={addNewMember}/>
 
             {/* rendering list of members */}
-            <MemberList memberList={members}/>
+            <MemberList memberList={memberList}/>
         </div>
     );
 

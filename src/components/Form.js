@@ -2,11 +2,11 @@ import React, {useState} from 'react';
 import "../styles.css"
 
 const Form = props => {
-
+    console.log("Form props: ", props)
     const [member, setMember] = useState({ name: "", email: "", role: "" });
 
     const changeHandler = event => {
-      setMember({ ...member, [event.target.member]: event.target.value });
+      setMember({ ...member, [event.target.name]: event.target.value });
     };
 
     const submitForm = event => {
@@ -25,7 +25,7 @@ const Form = props => {
             type="text"
             name="name"
             placeholder="Member Name"
-            value={member.body}
+            value={member.name}
             onChange={changeHandler}
           />
     
@@ -34,16 +34,16 @@ const Form = props => {
             type="text"
             name="email"
             placeholder="Member Email"
-            value={member.body}
+            value={member.email}
             onChange={changeHandler}
           />
 
           <label htmlFor="role">Role</label>
           <input
             type="text"
-            name="email"
+            name="role"
             placeholder="Member Role"
-            value={member.body}
+            value={member.role}
             onChange={changeHandler}
           />
     
