@@ -31,7 +31,7 @@ const Form = props => {
     
           <label htmlFor="email">Email</label>
           <input
-            type="text"
+            type="email"
             name="email"
             placeholder="Member Email"
             value={member.email}
